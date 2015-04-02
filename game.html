@@ -4,7 +4,7 @@
 (function () {
 
   var guess = prompt('What is my favorite color');
-  guess.toUpperCase();
+  guess.toLowerCase();
 
 
   var Person = function(color){
@@ -15,19 +15,37 @@
   var favorite = new Person ('red');
   var flavor  = new Person ('blue');
   var ice = new Person ('white');
+  var fire = new Person ('orange');
+  var forest = new Person ('green');
+  var barney= new Person ('purple');
+  var bigbird = new Person ('yellow');
+  var crow = new Person('black');
+
+
+
 
   while(true) {
-    if (guess === favorite.color || flavor.color || ice.color) {
+    if (guess === favorite.color || guess === flavor.color) {
       alert('You are awesome');
-
       break;
+
+    } else if (guess === forest.color) {
+       alert('Big Green fighting Machine');
+
+
+    } else if (guess === fire.color){
+      alert('I\'m smashing in orange');
+
+    } else if(guess=== barney.color){
+      alert('I live to enslave');
+
+    } else if(guess===bigbird.color){
+      alert('Big and Orange');
+
+    } else {
+      console.log("This is my else statement")
     }
 
-    else
-
-    {
-      guess = prompt('Nope, try Again');
-    }
 }
 })();
 
