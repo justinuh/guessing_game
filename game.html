@@ -13,20 +13,29 @@
   }
 
   var favorite = new Person ('red');
+  var flavor  = new Person ('blue');
+  var ice = new Person ('white');
 
   while(true) {
-    if (guess === favorite.color) {
+    if (guess === favorite.color || flavor.color || ice.color) {
       alert('You are awesome');
 
       break;
-    } else {
+    }
+
+    else
+
+    {
       guess = prompt('Nope, try Again');
     }
 }
 })();
+
+
 (function () {
-  var name = prompt('what is your name, bud?');
-  alert('Wow, ' + name + ', that name is okay, I guess.');
+
+    var name = prompt('what is your name, bud?');
+    alert('Wow, ' + name + ', that name is okay, I guess.');
 })();
 
 
